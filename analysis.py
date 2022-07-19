@@ -83,3 +83,13 @@ df.to_excel("output/data_results_no_ses_in_stone.xlsx",index=False)
 
 
 
+sql = """
+with condoms_as_ss AS (SELECT *
+FROM condoms c 
+INNER JOIN stepping_stones ss ON c."DREAMS ID No" = ss."DREAMS ID No") 
+SELECT cas."Event date",cas."Date of Birth" , cas."Group Name" as GRP,cas."Address Village",cas."Address Parish" ,cas."Distribution Point"
+FROM condoms_as_ss as cas order by cas."Event date",GRP ASC;
+"""
+
+
+

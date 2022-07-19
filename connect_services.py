@@ -46,6 +46,8 @@ df = pd.DataFrame(data=numpy_data, columns=["ID", "FIRST NAME","LAST NAME","DREA
 
 df.to_excel("output/data.xlsx")
 
+
+
         
 
 
